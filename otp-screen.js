@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, TextInput, SafeAreaView, Button } from 'react-native';
 
-const OtpScreen = () => {
+const OtpScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
           
@@ -20,7 +20,7 @@ const OtpScreen = () => {
                     color="#126e82"
                     accessibilityLabel="Proceed"
                     onPress={() =>
-                        navigation.navigate('otpScreen')
+                        navigation.navigate('RegistrationSuccess')
                     }
                 />
             </View>

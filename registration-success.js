@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-const Home = ({navigation}) => {
+const RegistrationSuccess = ({navigation}) => {
 
     return (
         <View style={styles.container}>
@@ -11,31 +11,20 @@ const Home = ({navigation}) => {
                     <Text style={styles.appTitle}> Expense Management System </Text>
                 </View>
                 <View style={styles.appDescArea}>
-                    <Text >
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                <Text >
+                        You Have Successfully Registered
                 </Text>
                 </View>
                 <View style={styles.btnBlock}>
                     <Button
                         style={styles.btn}
-                        title="Login"
+                        title="Main Menu"
                         color="#126e82"
-                        accessibilityLabel="Login"
+                        accessibilityLabel="Main Menu"
                         onPress={() =>
-                            navigation.navigate('LoginScreen')
+                            navigation.navigate('MainMenuScreen')
                           }
                     />
-                    <Button
-                        style={styles.btn}
-                        title="Register"
-                        color="#126e82"
-                        accessibilityLabel="Register"
-                        onPress={() =>
-                            navigation.navigate('Register')
-                          }
-                    /> 
                 </View>
         </View>
     );
@@ -54,13 +43,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         padding: 16,
+        textAlign: 'center'
     },
     appTitle: {
         color: '#212121',
         fontSize: 24,
     },
     appDescArea: {
-        flex: 2,
         padding: 16,
         // borderTopRightRadius: 10,
         // borderBottomLeftRadius: 10,
@@ -84,4 +73,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Home;
+export default RegistrationSuccess;
